@@ -1,0 +1,153 @@
+/* ============================================================
+   GRIMÓRIOS SECRETOS — Tema Dark Fantasy Bruxoso
+   Paleta: negro profundo, vinho/sangue, dourado envelhecido,
+   verde veneno e roxo arcano.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+    --bg-negro: #0b0a10;
+    --bg-negro-2: #14111a;
+    --pergaminho: #e8dcc0;
+    --pergaminho-escuro: #c9b98f;
+    --sangue: #7a1224;
+    --sangue-claro: #b0263f;
+    --dourado: #c9a24b;
+    --dourado-claro: #e6c46b;
+    --roxo-arcano: #4b2e6b;
+    --verde-veneno: #3c5a3c;
+    --borda: #3a2f24;
+}
+
+/* ---------- Base ---------- */
+body {
+    background-color: var(--bg-negro);
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(122, 18, 36, 0.12), transparent 40%),
+        radial-gradient(circle at 80% 0%, rgba(75, 46, 107, 0.15), transparent 45%),
+        repeating-linear-gradient(0deg, rgba(255,255,255,0.015) 0px, transparent 2px, transparent 4px);
+    color: var(--pergaminho);
+    font-family: 'EB Garamond', 'Georgia', serif;
+    letter-spacing: 0.2px;
+}
+
+h1, h2, h3, .navbar-brand {
+    font-family: 'Cinzel Decorative', 'Georgia', serif;
+    text-shadow: 0 0 8px rgba(201, 162, 75, 0.35), 0 2px 2px rgba(0,0,0,0.8);
+}
+
+a {
+    color: var(--dourado-claro);
+}
+
+a:hover {
+    color: var(--sangue-claro);
+}
+
+/* ---------- Navbar ---------- */
+.navbar.bg-danger {
+    background: linear-gradient(180deg, #1a0d12 0%, var(--bg-negro-2) 100%) !important;
+    border-bottom: 2px solid var(--dourado);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 12px rgba(122, 18, 36, 0.4) inset;
+}
+
+.navbar-brand {
+    color: var(--dourado-claro) !important;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link {
+    color: var(--pergaminho-escuro) !important;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 6px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--sangue-claro) !important;
+    text-shadow: 0 0 10px var(--sangue-claro);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--dourado) !important;
+    border-bottom: 1px solid var(--dourado);
+}
+
+.navbar-toggler {
+    border-color: var(--dourado) !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1) sepia(1) saturate(3) hue-rotate(0deg);
+}
+
+/* ---------- Seção de destaque (Hero) ---------- */
+section.bg-light {
+    background: linear-gradient(160deg, var(--bg-negro-2) 0%, #1c1420 60%, #100b14 100%) !important;
+    border-top: 1px solid var(--borda);
+    border-bottom: 1px solid var(--borda);
+    position: relative;
+}
+
+section.bg-light::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(75, 46, 107, 0.25), transparent 60%);
+    pointer-events: none;
+}
+
+section.bg-light h1 {
+    color: var(--dourado-claro);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+section.bg-light p.fs-5 {
+    color: var(--pergaminho-escuro);
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* ---------- Botões ---------- */
+.btn-danger {
+    background: linear-gradient(180deg, var(--sangue-claro), var(--sangue)) !important;
+    border: 1px solid var(--dourado) !important;
+    color: var(--pergaminho) !important;
+    font-family: 'Cinzel Decorative', serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 0 0px rgba(201, 162, 75, 0.0);
+    transition: box-shadow 0.35s ease, transform 0.2s ease;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(180deg, var(--sangue), #4a0d18) !important;
+    box-shadow: 0 0 18px rgba(176, 38, 63, 0.7), 0 0 6px var(--dourado);
+    transform: translateY(-2px);
+}
+
+/* ---------- Imagens ---------- */
+.img-fluid.rounded {
+    border: 2px solid var(--dourado);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7), 0 0 15px rgba(75, 46, 107, 0.4);
+    filter: sepia(15%) contrast(1.05) brightness(0.95);
+}
+
+/* ---------- Scrollbar bruxosa (opcional, navegadores webkit) ---------- */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-negro);
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--sangue), var(--roxo-arcano));
+    border-radius: 6px;
+}
